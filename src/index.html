@@ -9,20 +9,79 @@
     <title>Casa Criativa</title>
 </head>
 <body>
-    <img src="../public/logo.png" alt="Imagem da Logomarca">
+    <div id="container">
+        <section id="intro">
+            <header>
+                <img src="../public/logo.png" alt="Imagem da Logomarca">
+            </header>
 
-    <p>
-        Ficar em casa em períodos longos, não deve ser nada fácil.
-    </p>
-        Por isso, iremos catalogar idéias, brincadeiras, jogos, filmes, livros, cursos, dicas e tudo que for necessário para tornar esse momento mais interessante.
-    <p>
-        Comece clicanto em ver idéias para ver as ideias cadastradas e contribua adicionando sua idéia
-    </p>
+            <main>
+                <p>
+                    Ficar em casa em períodos longos, não deve ser nada fácil.
+                </p>
+                    Por isso, iremos catalogar idéias, <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.
+                <p>
+                    Comece clicanto em ver idéias para ver as ideias cadastradas e contribua adicionando sua idéia
+                </p>
+            </main>
+        
+            <section id="buttons">
+                <button>+ Adicionar Ideia</button>
+                <button class="fat">Ver Ideias</button>
+            </section>
+        
+            <footer>
+                Com &#128151; <a href="https://rocketseat.com.br/" target="_blank">Rocketseat</a>
+            </footer>
+        </section>
 
-    <button>+ Adicionar Ideia</button>
-    <button class="fat">Ver Ideias</button>
+        <section id="last-ideias">
+            <div class="idea">
+                <img 
+                    src="https://www.flaticon.com/svg/vstatic/svg/4206/4206329.svg?token=exp=1617842159~hmac=5c2aa6ebcc3321e5a27d938dacfd741a" 
+                    alt="Imagem de Curso de Programação">
 
-    <p id="footer">Com &#128151; <a href="https://rocketseat.com.br/" target="_blank">Rocketseat</a></p>
+                <div class="content">
+                    <h3>Cursos de Programação</h3>
+                    <p>Estudo</p>
+                    <div class="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, pariatur autem quibusdam labore quis mollitia consequatur harum hic cum aspernatur minima asperiores placeat, facilis magnam ratione ab et error soluta?
+                    </div>
+                    <a href="#">Ir para a Ideia</a>
+                </div>
+            </div>
+
+            <div class="idea">
+                <img 
+                    src="https://www.flaticon.com/svg/vstatic/svg/502/502128.svg?token=exp=1617842334~hmac=f20ed482c098849beebbfc97905ed9c5" 
+                    alt="Imagem de Exercícios">
+
+                <div class="content">
+                    <h3>Exercícios</h3>
+                    <p>Saúde</p>
+                    <div class="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, pariatur autem quibusdam labore quis mollitia consequatur harum hic cum aspernatur minima asperiores placeat, facilis magnam ratione ab et error soluta?
+                    </div>
+                    <a href="#">Ir para a Ideia</a>
+                </div>
+            </div>
+
+            <div class="idea">
+                <img 
+                    src="https://www.flaticon.com/svg/vstatic/svg/2906/2906496.svg?token=exp=1617842580~hmac=d1c0c1134e456c555ffa35768c91affd" 
+                    alt="Imagem de Meditação">
+
+                <div class="content">
+                    <h3>Meditação</h3>
+                    <p>Espiritualidade</p>
+                    <div class="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, pariatur autem quibusdam labore quis mollitia consequatur harum hic cum aspernatur minima asperiores placeat, facilis magnam ratione ab et error soluta?
+                    </div>
+                    <a href="#">Ir para a Ideia</a>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script src="scripts/script.js"></script>
 </body>
