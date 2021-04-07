@@ -191,3 +191,7 @@ form button:hover {
     color: white;
     text-decoration: none;
 }
+
+#modal.hide {
+    display: none;
+}
