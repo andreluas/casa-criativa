@@ -8,8 +8,6 @@
   de confinamento pelo Covid-19 mais interessante
 </h2>
 
----
-
 <h3>
   Front-end
 </h3>
