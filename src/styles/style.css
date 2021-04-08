@@ -3,7 +3,10 @@ body {
     color: #25282B;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    overflow-x: hidden;
+}
+
+body.hideScroll {
+    overflow: hidden;
 }
 
 .hide {
@@ -124,14 +127,20 @@ footer a {
     background-color: #ff5E84;
     position: absolute;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
 }
 
+#modal.addScroll {
+    overflow: auto;
+}
+
 #modal .content {
-    margin-top: 128px;
+    margin-top: 15%;
+    margin-bottom: 15%;
     color: white;
 }
 
@@ -143,7 +152,7 @@ footer a {
 #modal form {
     width: 80%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -266,7 +275,6 @@ header {
 
 section#title {
     text-align: center;
-    margin: 64px 0;
 }
 
 section#title p {
@@ -287,4 +295,10 @@ section#ideas {
 
 section#ideas .idea {
     margin: 0;
+}
+
+section#title,
+section#ideas,
+footer {
+    margin-top: 64px;
 }
