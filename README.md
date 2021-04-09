@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="public/logo.png">
+  <img src="public/assets/logo/logo.png">
 </h1>
 
 <h2 align="center">
@@ -13,9 +13,9 @@
 </h3>
 
 <ul>
-  <li> <img src="assets/img/html.png" alt="html5" height="18"> <strong> HTML5 </strong> </li>
-  <li> <img src="assets/img/css.png" alt="css3" height="18"> <strong> CSS3 </strong> </li>
-  <li> <img src="assets/img/js.png" alt="js" height="18"> <strong> JavaScript </strong> </li>
+  <li> <img src="public/assets/img/html.png" alt="html5" height="18"> <strong> HTML5 </strong> </li>
+  <li> <img src="public/assets/img/css.png" alt="css3" height="18"> <strong> CSS3 </strong> </li>
+  <li> <img src="public/assets/img/js.png" alt="js" height="18"> <strong> JavaScript </strong> </li>
 </ul>
 
 <h3>
@@ -23,8 +23,8 @@
 </h3>
 
 <ul>
-  <li> <img src="assets/img/node.png" alt="node.js" height="18"> <strong> Node.js </strong> </li>
-  <li> <img src="assets/img/sqlite.png" alt="sqlite3" height="18"> <strong> SQLite 3 </strong> </li>
+  <li> <img src="public/assets/img/node.png" alt="node.js" height="18"> <strong> Node.js </strong> </li>
+  <li> <img src="public/assets/img/sqlite.png" alt="sqlite3" height="18"> <strong> SQLite 3 </strong> </li>
 </ul>
 
 <h3>
@@ -48,9 +48,9 @@ Acesse a aplicação via **localhost:3000**
 
 ### Telas
 
-![screenshot](assets/img/casa-criativa.png)
-![screenshot](assets/img/casa-criativa2.png)
-![screenshot](assets/img/casa-criativa3.png)
+![screenshot](public/assets/img/casa-criativa.png)
+![screenshot](public/assets/img/casa-criativa2.png)
+![screenshot](public/assets/img/casa-criativa3.png)
 
 ---
 
