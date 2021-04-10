@@ -1,51 +1,37 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    {% include "head.html" %}
-    <title>Casa Criativa</title>
-</head>
-<body>
-    <div id="container">
-        <section id="intro">
-            <header>
-                <a href="/">
-                    <img src="/assets/logo/logo.png" alt="Imagem da Logomarca">
-                </a>
-            </header>
+{% extends "layout.html" %}
+{% block content %}
+<section id="intro">
+    <header>
+        <a href="/">
+            <img src="/assets/logo/logo.png" alt="Imagem da Logomarca">
+        </a>
+    </header>
 
-            <main>
-                <p>
-                    Ficar em casa em períodos longos, não deve ser nada fácil.
-                </p>
+    <main>
+        <p>
+            Ficar em casa em períodos longos, não deve ser nada fácil.
+        </p>
 
-                <p>
-                    Por isso, iremos catalogar idéias, <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.
-                </p>
-                
-                <p>
-                    Comece clicanto em ver idéias para ver as ideias cadastradas e contribua adicionando sua idéia
-                </p>
-            </main>
+        <p>
+            Por isso, iremos catalogar idéias, <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.
+        </p>
         
-            <section id="buttons">
-                <button onclick="onOff()">+ Adicionar Ideia</button>
-                <a href="/ideias" class="button">Ver Ideias</a>
-            </section>
-        
-            <footer>
-                Com &#128151; <a href="https://rocketseat.com.br/" target="_blank">Rocketseat</a>
-            </footer>
-        </section>
-    
-        <!-- SECTION IDEAS -->
-        <section id="last-ideias">
-            {% include "all_ideas.html" %}
-        </section>
-    </div>
+        <p>
+            Comece clicanto em ver idéias para ver as ideias cadastradas e contribua adicionando sua idéia
+        </p>
+    </main>
 
-    <!-- MODAL -->
-    {% include "modal.html" %}
+    <section id="buttons">
+        <button onclick="onOff()">+ Adicionar Ideia</button>
+        <a href="/ideias" class="button">Ver Ideias</a>
+    </section>
 
-    <script src="/scripts/script.js"></script>
-</body>
-</html>
+    <footer>
+        Com &#128151; <a href="https://rocketseat.com.br/" target="_blank">Rocketseat</a>
+    </footer>
+</section>
+
+<section id="last-ideias">
+    {% include "all_ideas.html" %}
+</section>
+{% endblock %}
