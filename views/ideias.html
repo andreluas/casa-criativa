@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    {% include "head.html" %}
     <title>Ideias - Casa Criativa</title>
 </head>
 <body id="page-ideas">
@@ -30,22 +24,7 @@
 
         <main>
             <section id="ideas">
-                {% for idea in ideas %}
-                    <div class="idea">
-                        <img 
-                            src="{{idea.img}}" 
-                            alt="Imagem de {{idea.title}}">
-
-                        <div class="content">
-                            <h3>{{idea.title}}</h3>
-                            <p>{{idea.category}}</p>
-                            <div class="description">
-                                {{idea.description}}
-                            </div>
-                            <a href="#">Ir para a Ideia</a>
-                        </div>
-                    </div>
-                {% endfor %}
+                {% include "all_ideas.html" %}
             </section>
         </main>
 
@@ -55,41 +34,7 @@
     </div>
 
      <!-- MODAL -->
-     <div id="modal" class="hide">
-        <div class="content">
-            <h1>Nova Ideia</h1>
-
-            <form action="">
-                <div class="input-wrapper">
-                    <label for="title">Título da Ideia</label>
-                    <input type="text" name="title"> 
-                </div>
-                    
-                <div class="input-wrapper">
-                    <label for="category">Categoria</label>
-                    <input type="text" name="category"> 
-                </div>
-
-                <div class="input-wrapper">
-                    <label for="image">Link da imagem</label>
-                    <input type="url" name="image">
-                </div>
-
-                <div class="input-wrapper">
-                    <label for="description">Digite uma descrição para essa ideia</label>
-                    <textarea name="description" cols="30" rows="10"></textarea>
-                </div>
-
-                <div class="input-wrapper">
-                    <label for="link">Link da ideia</label>
-                    <input type="url" name="link">
-                </div>
-
-                <a href="#" onclick="onOff()">Voltar</a>
-                <button>Salvar</button>
-            </form>
-        </div>
-    </div>
+     {% include "modal.html" %}
 
     <script src="/scripts/script.js"></script>
 </body>
