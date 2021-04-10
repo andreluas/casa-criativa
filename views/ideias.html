@@ -1,41 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    {% include "head.html" %}
+{% extends "layout.html" %}
+{% set bodyId = "page-ideas" %}
+
+{% block title %}
     <title>Ideias - Casa Criativa</title>
-</head>
-<body id="page-ideas">
-    <div id="container">
-        <header>
-            <a href="/">
-                <img src="/assets/logo/logo.png" alt="Imagem da Logomarca">
-            </a>
+{% endblock title %}
 
-            <nav>
-                <li><a href="/">Início</a></li>
-                <li><a href="#" class="button" onclick="onOff()">Nova Ideia</a></li>
-            </nav>
-        </header>
+{% block content %}
+<header>
+    <a href="/">
+        <img src="/assets/logo/logo.png" alt="Imagem da Logomarca">
+    </a>
 
-        <section id="title">
-            <p>em exibição</p>
-            <h1>Ideias</h1>
-        </section>
+    <nav>
+        <li><a href="/">Início</a></li>
+        <li><a href="#" class="button" onclick="onOff()">Nova Ideia</a></li>
+    </nav>
+</header>
 
-        <main>
-            <section id="ideas">
-                {% include "all_ideas.html" %}
-            </section>
-        </main>
+<section id="title">
+    <p>em exibição</p>
+    <h1>Ideias</h1>
+</section>
 
-        <footer>
-                Com &#128151; <a href="https://rocketseat.com.br/" target="_blank">Rocketseat</a>
-        </footer>
-    </div>
+<main>
+    <section id="ideas">
+        {% include "all_ideas.html" %}
+    </section>
+</main>
 
-     <!-- MODAL -->
-     {% include "modal.html" %}
-
-    <script src="/scripts/script.js"></script>
-</body>
-</html>
+<footer>
+        Com &#128151; <a href="https://rocketseat.com.br/" target="_blank">Rocketseat</a>
+</footer>
+{% endblock %}

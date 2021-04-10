@@ -2,9 +2,11 @@
 <html lang="pt-br">
 <head>
     {% include "head.html" %}
+    {% block title %} 
     <title>Casa Criativa</title>
+    {% endblock title %}
 </head>
-<body>
+<body id="{{ bodyId }}">
     <div id="container">
         {% block content %} 
         {% endblock %}
