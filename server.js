@@ -39,6 +39,9 @@ const db = require("./db")
 // Configuração de arquivos estáticos (css, scripts, imgs)
 server.use(express.static("public"))
 
+// Habilitar uso do req.body
+server.use(express.urlencoded({ extended: true }))
+
 // Configuração do Nunjucks
 const nunjucks = require("nunjucks")
 nunjucks.configure("views", {
@@ -50,21 +53,65 @@ nunjucks.configure("views", {
 // Feito captura do cliente, para resposta
 server.get("/", function(req, res) {
     // Lógica para mostrar no index, quantidade de Ideas
-    const reversedIdeas = [...ideas].reverse()
-
-    let lastIdeas = []
-    for (let idea of reversedIdeas){
-        if (lastIdeas.length < 3){
-            lastIdeas.push(idea)
+    db.all(`SELECT * FROM ideas`, function(err, rows){
+        if(err) {
+            console.log(err)
+            return res.send("Application ERROR! Please contact support for assistance :)")
         }
-    }
 
-    return res.render("index.html", { ideas: lastIdeas })
+        const reversedIdeas = [...rows].reverse()
+
+        let lastIdeas = []
+        for (let idea of reversedIdeas){
+            if (lastIdeas.length < 3){
+                lastIdeas.push(idea)
+            }
+        }
+
+        return res.render("index.html", { ideas: lastIdeas })
+    })
 })
 
 server.get("/ideias", function(req, res){
-    const reversedIdeas = [...ideas].reverse()
-    return res.render("ideias.html", { ideas: reversedIdeas })
+    db.all(`SELECT * FROM ideas`, function(err, rows){
+        if(err) {
+            console.log(err)
+            return res.send("Application ERROR! Please contact support for assistance :)")
+        }
+
+        const reversedIdeas = [...rows].reverse()
+        return res.render("ideias.html", { ideas: reversedIdeas })
+    })
+})
+
+server.post("/", function(req, res){
+    // Inserir dados
+    const query = `
+        INSERT INTO ideas(
+                image,
+                title,
+                category,
+                description,
+                link
+            ) VALUES (?,?,?,?,?);
+    `
+
+    const values = [
+        req.body.image,
+        req.body.title,
+        req.body.category,
+        req.body.description,
+        req.body.link,
+    ]
+
+    db.run(query, values, function(err){
+        if(err) {
+            console.log(err)
+            return res.send("Application ERROR! Please contact support for assistance :)")
+        }
+
+       return res.redirect("/ideias")
+    })
 })
 
 // Ligando servidor na porta 3000
