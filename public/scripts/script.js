@@ -14,3 +14,15 @@ function onOff(){
         .classList
         .toggle("addScroll")
 }
+
+function checkFields(event) {
+    const valuesToCheck = [
+        "title",
+        "image",
+        "category",
+        "description",
+        "link",
+    ]
+
+    
+}
