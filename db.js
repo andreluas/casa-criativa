@@ -13,6 +13,7 @@ db.serialize(function(){
             link TEXT
         );
     `)
+    
     // Inserir dados
     // const query = `
     // INSERT INTO ideas(
