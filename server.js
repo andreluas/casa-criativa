@@ -44,7 +44,7 @@ server.use(express.urlencoded({ extended: true }))
 
 // Configuração do Nunjucks
 const nunjucks = require("nunjucks")
-nunjucks.configure("views", {
+nunjucks.configure("docs", {
     express: server, 
     noCache: true,
 })
