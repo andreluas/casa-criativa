@@ -23,8 +23,5 @@
     "nodemon": "^2.0.7",
     "nunjucks": "^3.2.3",
     "sqlite3": "^5.0.2"
-  },
-  "devDependencies": {
-    "gh-pages": "^3.1.0"
   }
 }
